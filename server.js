@@ -8,7 +8,7 @@ const { WebSocketServer } = require('ws');
 
 const CONFIG = {
   myId: crypto.randomUUID(),
-  port: 19131,           // единый порт: веб-страница + API + вход для /connect из Minecraft
+  port: process.env.PORT ? parseInt(process.env.PORT, 10) : 19131,
   discoveryPort: 47101,  // UDP-обнаружение других телефонов в той же Wi-Fi сети
   maxHearDistance: 30,
   fullVolumeDistance: 3
