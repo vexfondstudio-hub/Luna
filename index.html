@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>LunaVS</title>
+<style>
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; user-select:none; }
+  body { margin:0; background:#111; color:#eee; font-family:Segoe UI,Arial,sans-serif; padding:16px; }
+  h1 { font-size:18px; margin:0 0 12px; color:#8fd694; }
+  .row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #222; font-size:13px; }
+  #talk { width:100%; height:160px; border-radius:16px; border:none; margin:16px 0 8px; font-size:20px; font-weight:bold;
+          background:#222; color:#ccc; }
+  #talk.active { background:#2e7d32; color:#fff; }
+  #meter-wrap { height:10px; background:#222; border-radius:5px; overflow:hidden; margin-bottom:16px; }
+  #meter-bar { height:100%; width:0%; background:linear-gradient(90deg,#4caf50,#ffeb3b,#f44336); }
+  .peer { display:flex; justify-content:space-between; padding:5px 0; font-size:14px; color:#ccc; }
+</style>
+</head>
+<body>
+  <h1>LunaVS 🎙</h1>
+  <div class="row"><span>Minecraft</span><span id="mc-status">не подключен</span></div>
+  <div class="row"><span>Позиция</span><span id="pos">-</span></div>
+  <button id="talk">Удерживай, чтобы говорить</button>
+  <div id="meter-wrap"><div id="meter-bar"></div></div>
+  <div id="peers"><small>Игроки рядом:</small></div>
+  <script src="app.js"></script>
+</body>
+</html>

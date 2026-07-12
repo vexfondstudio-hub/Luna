@@ -1,0 +1,13 @@
+{
+  "name": "lunavs-site",
+  "version": "1.0.0",
+  "description": "LunaVS — proximity voice chat server for Minecraft Bedrock, runs on-device via Termux",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0",
+    "express": "^4.19.2"
+  }
+}
